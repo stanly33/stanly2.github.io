@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>我的網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+</head>
+<body>
+    <div class="header">
+        <h1>歡迎來到我的網站</h1>
+        <div class="image-slider">
+            <div><img src="./JQUERY/歡迎.webp" alt="Image 1"></div>
+            <div><img src="./JQUERY/好友.webp" alt="Image 2"></div>
+            <div><img src="./JQUERY/戰鬥.webp" alt="Image 3"></div>
+            <div><img src="./JQUERY/技能.webp" alt="Image 4"></div>
+            <div><img src="./JQUERY/勝利.webp" alt="Image 5"></div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="navigation">
+            <a href="game-intro.html" target="content-frame">遊戲機制介紹</a>
+            <a href="map-mechanics.html" target="content-frame">地圖物件、機制</a>
+            <a href="teaching-videos.html" target="content-frame">各路教學影片</a>
+            <a href="recommended-characters.html" target="content-frame">推薦新手角色</a>
+            <a href="site-journey.html" target="content-frame">製作歷程</a>
+        </div>
+        <div class="content">
+            <iframe name="content-frame" src="game-intro.html" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="link-buttons">
+            <a href="mailto:Stanly333999@gmail.com" class="button">聯絡我</a>
+            <a href="https://wildrift.leagueoflegends.com/zh-tw/news/" class="button">參考網址</a>
+            <a href="https://wildrift.leagueoflegends.com/zh-tw/news/" class="button">圖片輪播參考</a>
+            <a id="scrollToTopBtn" class="button">回到最上面</a>
+            <h2>姓名：謝松軒 學號：B1102028</h2>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.querySelector('iframe').contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        $(document).ready(function(){
+            $('.image-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+            });
+        });
+    </script>
+</body>
+</html>
